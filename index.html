@@ -18,6 +18,7 @@
     <div>
       <p id="counter"></p>
       <script type="text/javascript">
+        // Этот скрипт просто ждёт 5 секунд и редиректит
         let i = 5;
         const pCounter = document.getElementById("counter");
         const loop = () => {
@@ -28,7 +29,9 @@
             setTimeout(loop, 1000);
           }
         }
-
+        window.addEventListener('DOMContentLoaded', () => {
+            loop();
+        });
       </script>
     </div>
   </body>
